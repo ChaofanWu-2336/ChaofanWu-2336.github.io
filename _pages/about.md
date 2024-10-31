@@ -1,49 +1,206 @@
 ---
 permalink: /
-title: "Chaofan Wu Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: ""
+excerpt: ""
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+{% if site.google_scholar_stats_use_cdn %}
+{% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
+{% else %}
+{% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
+{% endif %}
+{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
-Chaofan Wu
-======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+<span class='anchor' id='about-me'></span>
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+I am currently a 1st year PhD student in the Department of Computer Science and Engineering, Chinese University of Hong Kong, advised by Prof. [Jiaya Jia](https://scholar.google.com/citations?user=XPAkzTEAAAAJ). Previously, I received my master degree from Tsinghua University in 2023, advised by Prof. Wenming Yang. During my study in Tsinghua University, I spent a good time with prof. [Yapeng Tian](https://scholar.google.com/citations?user=lxCqdpoAAAAJ), prof. [Yulun Zhang](https://scholar.google.com/citations?user=ORmLjWoAAAAJ), prof. [Radu Timofte](https://scholar.google.com/citations?user=u3MwH5kAAAAJ), and prof. [Luc Van Gool](https://scholar.google.com/citations?user=TwMib_QAAAAJ). Before that, I obtained my B.E degree from Xidian University in 2020. 
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+Recently, my research interests focus on generative models and LLM. Previously, I focused on low-level vision and model compression.
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+<span class='anchor' id='-news'></span>
 
-Create content & metadata
-------
-For site content, there is one markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+# News
+- **2024.07**	[LLMGA](https://github.com/dvlab-research/LLMGA) is accepted by ECCV 2024.
+- **2023.11**	We release Multimodal Large Language Model based Generation Assistant ([LLMGA](https://github.com/dvlab-research/LLMGA)).
+- **2023.09**	1 paper is accepted by NeurIPS 2023 (Soptlight).
+- **2023.10**	We release [DiffI2I](https://arxiv.org/pdf/2308.13767).
+- **2023.07**	1 paper is accepted by ICCV 2023.
+- **2023.06**	1 paper is accepted by TIP.
+- **2023.02**	1 paper is accepted by CVPR 2023.
+- **2023.01**	2 papers are accepted by ICLR 2023.
+- **2021.12**	2 papers are accepted by AAAI 2022.
 
-**Markdown generator**
+<span class='anchor' id='-publications'></span>
 
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the markdown files, then commit and push them to the GitHub repository.
+# Publications 
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+<!-- LLMGA -->
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ECCV2024</div><img src='images/llmga-arxiv2023.png' alt="sym" width="70%"></div></div>
+<div class='paper-box-text' markdown="1">
 
-Example: editing a markdown file for a talk
-![Editing a markdown file for a talk](/images/editing-talk.png)
+[LLMGA: Multimodal Large Language Model based Generation Assistant](https://arxiv.org/pdf/2311.16500)
 
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+**Bin Xia**,  Shiyin Wang, Yingfan Tao, Yitong Wang, Jiaya Jia
+
+[**[Paper]**](https://arxiv.org/pdf/2311.16500)&nbsp;
+[**[Code]**](https://github.com/dvlab-research/LLMGA)
+<!-- - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
+</div>
+</div>
+
+<!-- DiffI2I -->
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arxiv</div><img src='images/diffi2i-arxiv2023.png' alt="sym" width="70%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[DiffI2I: Efficient Diffusion Model for Image-to-Image Translation](https://arxiv.org/pdf/2308.13767)
+
+**Bin Xia**, Yulun Zhang, Shiyin Wang, Yitong Wang, Xinglong Wu, Yapeng Tian, Wenming Yang, Radu Timotfe, Luc Van Gool
+
+[**[Paper]**](https://arxiv.org/pdf/2308.13767)&nbsp;
+[**[Code]**](https://github.com/Zj-BinXia/DiffIR)
+<!-- - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
+</div>
+</div>
+
+<!-- Hi-Diff -->
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS2023</div><img src='images/hidiff-nips2023.png' alt="sym" width="70%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Hierarchical Integration Diffusion Model for Realistic Image Deblurring](https://arxiv.org/pdf/2305.12966.pdf)
+
+Zheng Chen, Yulun Zhang, Ding Liu, **Bin Xia**, Jinjin Gu, Linghe Kong, and Xin Yuan
+
+[**[Paper]**](https://arxiv.org/pdf/2305.12966.pdf)&nbsp;
+[**[Code]**](https://github.com/zhengchen1999/HI-Diff)
+<!-- - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
+</div>
+</div>
+
+
+<!-- DiffIR -->
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV2023</div><img src='images/diffir-iccv2023.png' alt="sym" width="70%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[DiffIR: Efficient diffusion model for image restoration](https://arxiv.org/pdf/2303.09472.pdf)
+
+**Bin Xia**, Yulun Zhang, Shiyin Wang, Yitong Wang, Xinglong Wu, Yapeng Tian, Wenming Yang, Luc Van Gool
+
+[**[Paper]**](https://arxiv.org/pdf/2303.09472.pdf)&nbsp;
+[**[Code]**](https://github.com/Zj-BinXia/DiffIR)
+<!-- - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
+</div>
+</div>
+
+
+
+<!-- SSL -->
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR2023</div><img src='images/ssl-cvpr2023.png' alt="sym" width="70%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Structured Sparsity Learning for Efficient Video Super-Resolution](https://arxiv.org/pdf/2206.07687.pdf)
+
+**Bin Xia**, Jingwen He, Yulun Zhang, Yitong Wang, Yapeng Tian, Wenming Yang, Luc Van Gool
+
+[**[Paper]**](https://arxiv.org/pdf/2206.07687.pdf)&nbsp;
+[**[Code]**](https://github.com/Zj-BinXia/SSL)
+<!-- - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
+</div>
+</div>
+
+<!-- BBCU -->
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR2023</div><img src='images/bbcu-iclr2023.png' alt="sym" width="70%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Basic Binary Convolution Unit for Binarized Image Restoration Network](https://arxiv.org/pdf/2210.00405.pdf)
+
+**Bin Xia**, Yulun Zhang, Yitong Wang, Yapeng Tian, Wenming Yang, Radu Timofte, Luc Van Gool
+
+[**[Paper]**](https://arxiv.org/pdf/2210.00405.pdf)&nbsp;
+[**[Code]**](https://github.com/Zj-BinXia/BBCU)
+<!-- - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
+</div>
+</div>
+
+<!-- KDSR -->
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR2023</div><img src='images/kdsr-iclr2023.png' alt="sym" width="70%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Knowledge Distillation based Degradation Estimation for Blind Super-Resolution](https://arxiv.org/pdf/2211.16928.pdf)
+
+**Bin Xia**, Yulun Zhang, Yitong Wang, Yapeng Tian, Wenming Yang, Radu Timofte, Luc Van Gool
+
+[**[Paper]**](https://arxiv.org/pdf/2211.16928.pdf)&nbsp;
+[**[Code]**](https://github.com/Zj-BinXia/KDSR)
+<!-- - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
+</div>
+</div>
+
+
+
+<!-- MRDA -->
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TIP2022</div><img src='images/MRDA-tip2022.png' alt="sym" width="70%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Meta-learning based degradation representation for blind super-resolution](https://arxiv.org/pdf/2207.13963.pdf)
+
+**Bin Xia**, Yapeng Tian, Yulun Zhang, Yucheng Hang, Wenming Yang, Qingmin Liao
+
+[**[Paper]**](https://arxiv.org/pdf/2207.13963.pdf)&nbsp;
+[**[Code]**](https://github.com/Zj-BinXia/MRDA)
+<!-- - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
+</div>
+</div>
+
+<!-- AMSA -->
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI2022</div><img src='images/amsa-aaai2022.png' alt="sym" width="70%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Coarse-to-Fine Embedded PatchMatch and Multi-Scale Dynamic Aggregation for Reference-based Super-Resolution](https://arxiv.org/abs/2201.04358)
+
+**Bin Xia**, Yucheng Hang, Yapeng Tian, Wenming Yang, Qingmin Liao, Jie Zhou
+
+[**[Paper]**](https://arxiv.org/abs/2201.04358)&nbsp;
+[**[Code]**](https://github.com/Zj-BinXia/AMSA)
+<!-- - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
+</div>
+</div>
+
+<!-- ENLCA -->
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI2022</div><img src='images/enlca-aaai2022.png' alt="sym" width="70%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Efficient Non-Local Contrastive Attention for Image Super-Resolution](https://arxiv.org/pdf/2201.03794)
+
+**Bin Xia**, Yucheng Hang, Yapeng Tian, Wenming Yang, Qingmin Liao, Jie Zhou
+
+[**[Paper]**](https://arxiv.org/pdf/2201.03794.pdf)&nbsp;
+[**[Code]**](https://github.com/Zj-BinXia/ENLCA)
+<!-- - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
+</div>
+</div>
+
+<span class='anchor' id='-honors-and-awards'></span>
+
+# Honors and Awards
+- **2023.07**,  Excellent Graduate of Tsinghua University
+- **2023.07**,  Excellent Master Thesis Award, Tsinghua University
+- **2023.05**,  Outstanding Reviewer Award at CVPR
+- **2023.05**,  First Prize in Internship Award of Tsinghua University
+- **2022.10**,  National Scholarship, Tsinghua University
+- **2020.07**,  Excellent Graduate of Xidian University
+- **2018.10**,  National Scholarship, Xidian University
+
+<span class='anchor' id='-services'></span>
+
+# Services
+
+**Conference Reviewer**: CVPR, ICLR, ICCV, NeurIPS, AAAI, WACV
+
+**Journal Reviewer**: TIP, IJCV, TNNLS, TMM, TCSVT
+
+
+
